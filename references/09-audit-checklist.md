@@ -140,9 +140,16 @@ Use this structure for audit reports. Keep it scannable. Adjust depth to the req
 
 ## Findings by step
 ### [Step or screen name]
-| Issue | Principle (grade) | Severity | Recommendation |
-|---|---|---|---|
-| [What the user experiences] | [e.g. Hidden costs (B)] | 3 | [Specific change] |
+| Issue | Friction type | Principle (grade) | Severity | Structural recommendation | Disqualified obvious fix |
+|---|---|---|---|---|---|
+| [What user experiences] | [Comprehension / Anxiety / Motor / Timing / Reactance] | [e.g. Hidden costs (B)] | 3 | [Structural change] | [Why tooltip/modal/etc. rejected] |
+
+## Top bottleneck: Three structural solution angles
+For the single highest-severity issue, provide three distinct directions (see `references/10-problem-solving-lateral-ux.md`):
+- **Angle A (Subtractive / System):** [Eliminate the step, infer data, smart defaults]
+- **Angle B (Cognitive / Risk Reversal):** [Dissolve anxiety, plain language, transparent guarantees]
+- **Angle C (Structural / Timing Shift):** [Move ask post-value, reverse onboarding, inline controls]
+- **Disqualified vanilla idea:** [Explicitly name the superficial band-aid and why it fails]
 
 ## Ethics and legal risk
 [Each issue with the pattern name, the risk, and the fair alternative. Write "None found" if clean.]

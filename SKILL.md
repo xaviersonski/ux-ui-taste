@@ -75,42 +75,78 @@ Read only the files relevant to the task. Each principle entry has the same shap
 | `references/07-ethics-dark-patterns-law.md` | Dark pattern taxonomy with fair alternatives, evidence on their effects, current US, UK and EU law | Any persuasion, subscription, cancellation, consent or pricing work. Always skim before recommending urgency, scarcity, defaults or retention tactics |
 | `references/08-evidence-myths-measurement.md` | Replication status table, myths, how to read industry stats, metrics, A/B testing hygiene | When citing numbers, when the user cites a "law", when proposing tests |
 | `references/09-audit-checklist.md` | Full audit checklist by principle, severity scale, output template | Audit mode, always |
+| `references/10-problem-solving-lateral-ux.md` | The 5 friction dimensions, the vanilla trap, 8 lateral thinking moves, the 3-angle mandate, disqualifying superficial fixes | When diagnosing why a flow is failing, generating high-taste fixes, or choosing between directions |
 
 ### Flow quick index
 
 The library is organized by principle, but most requests arrive as a flow. Use this to find the right files fast.
 
 - **Landing or home page.** 02 (first impressions, hierarchy, fold), 01 (clarity, scent), 03 (social proof, trust).
-- **Signup and onboarding.** 04 (time to value, endowed progress, goal gradient), 01 (progressive disclosure), 06 (forms), 05 (first success moment).
-- **Pricing page and paywall.** 03 (anchoring, decoys, center stage, framing, risk reversal), 07 (honest urgency, subscriptions law).
+- **Signup and onboarding.** 04 (time to value, endowed progress, goal gradient), 01 (progressive disclosure), 06 (forms), 05 (first success moment), 10 (timing shift).
+- **Pricing page and paywall.** 03 (anchoring, decoys, center stage, framing, risk reversal), 07 (honest urgency, subscriptions law), 10 (anxiety dissolver).
 - **Product or detail page.** 03 (reviews, trust), 02 (hierarchy, imagery), 01 (choice overload).
 - **Cart and checkout.** 06 (forms, guest checkout, validation), 03 (total cost transparency, trust at payment), 05 (confirmation as the ending), 07 (drip pricing).
 - **Search and browse.** 01 (information scent), 06 (search UX, filters, no results).
-- **Dashboards and data-heavy tools.** 01 (cognitive load, defaults), 02 (hierarchy, density).
-- **Errors, empty and loading states.** 05 (waiting, tone, recovery), 06 (feedback, prevention).
+- **Dashboards and data-heavy tools.** 01 (cognitive load, defaults), 02 (hierarchy, density), 10 (subtractive solving).
+- **Errors, empty and loading states.** 05 (waiting, tone, recovery), 06 (feedback, prevention), 10 (state reframing).
 - **Notifications and re-engagement.** 04 (prompts, habits, reactance), 07 (nagging).
 - **Cancellation and downgrade.** 07 first, then 05 (endings).
+- **Stuck or underperforming flow.** 10 first (diagnose the 5 friction types, apply lateral thinking moves, avoid the vanilla trap).
+
+## How to think: Avoiding the vanilla trap with lateral UX moves
+
+AI assistants frequently fail at UX by prescribing predictable, one-size-fits-all band-aids: adding tooltips `(i)`, slapping modal banners over ignored buttons, making CTAs bigger and greener, or inserting generic onboarding checklists. If an interface requires a tooltip to be understood, the copy or mental model has already failed.
+
+When diagnosing problems and crafting fixes, follow the lateral thinking protocol in `10-problem-solving-lateral-ux.md`:
+
+1. **Diagnose the true friction dimension:**
+   - *Comprehension:* "I don't understand what this means or what clicking this will do." (Mental model clash).
+   - *Anxiety & Risk:* "I understand, but fear the consequence: billing, spam, data loss." (Loss aversion).
+   - *Cognitive / Motor:* "Demands too much reading, typing, or thumb travel." (Overload).
+   - *Timing & Value:* "Asking for commitment before demonstrating value." (Earn the ask violation).
+   - *Autonomy & Reactance:* "Feeling coerced, nagged, or trapped." (Dark patterns).
+   A fix targeting the wrong friction always fails (e.g. making a button bigger when the user fears the hidden price).
+
+2. **Climb the abstraction ladder:** Ask *"What is this a way of doing?"* to detach from the current UI widget and reveal the underlying human job.
+3. **Deploy the 8 lateral thinking moves:**
+   - *Subtractive Solving:* Delete the step, infer the data, or eliminate the question via smart defaults.
+   - *Timing Shift:* Move the ask to the moment of post-value motivation (e.g. save/export).
+   - *Effort Inversion:* Shift labor from human fingers to system logic (Tesler's law).
+   - *Contextual Relocation:* Move controls to inline focus/hover rather than remote toolbars.
+   - *Radical Risk Reversal:* Dissolve fear directly at the trigger ("No card required. Cancel in 1 click").
+   - *State Reframing:* Turn empty, loading, or 404 dead ends into high-momentum springboards.
+   - *Progressive Engagement:* Replace walls of effort with a 1-second starter commitment.
+   - *Assumption Inversion:* Challenge industry dogma and test the plausible opposite.
+
+4. **The three-angle mandate:** When proposing fixes, never provide 3 minor tweaks to the same widget. Provide 3 distinct structural directions:
+   - *Angle A: The Subtractive / System Move* (automate, default, delete).
+   - *Angle B: The Cognitive & Risk Reversal Move* (plain language, inline reassurance).
+   - *Angle C: The Structural / Timing Shift* (change interaction paradigm, defer the ask).
+
+5. **The disqualification check:** Explicitly state which obvious, superficial band-aid was considered and why it was rejected.
 
 ## Mode 1. Designing a flow or screen
 
 1. **Frame the job.** Identify who the user is, what job they are hiring the product for, their context (device, urgency, expertise, emotional state), the business goal, and one success metric. If key facts are missing, make a reasonable assumption and state it.
 2. **Map the flow as steps.** For each step write the user's question ("what is this?", "is it safe?", "how much?"), their likely anxiety, the one primary action, and what they need to know to take it. Cut any step that answers no user question.
 3. **Walk the principle families.** For each step, check cognitive load, perception, decision, motivation, emotion, feedback and ethics using the reference files. Apply the strongest relevant principles, favoring grade A and B.
-4. **Specify every state.** Default, empty, loading, partial, error, success, and edge cases (long text, zero results, slow network, returning user, screen reader). Most products feel bad in the states nobody designed.
-5. **Design the peak and the end.** Name the moment of value (the "aha") and make sure it arrives early and lands well. Make the last screen of the flow clear, reassuring and forward-looking.
-6. **Run the ethics check.** Apply the three tests in `07`. Replace any manipulative tactic with its fair alternative.
-7. **Decide what to test.** List the two or three riskiest assumptions and how to test them, with a primary metric and a guardrail metric.
+4. **Deploy lateral moves.** Ask: Can this step be eliminated? Can the software do the typing? Can the ask happen later?
+5. **Specify every state.** Default, empty, loading, partial, error, success, and edge cases (long text, zero results, slow network, returning user, screen reader). Most products feel bad in the states nobody designed.
+6. **Design the peak and the end.** Name the moment of value (the "aha") and make sure it arrives early and lands well. Make the last screen of the flow clear, reassuring and forward-looking.
+7. **Run the ethics check.** Apply the three tests in `07`. Replace any manipulative tactic with its fair alternative.
+8. **Decide what to test.** List the two or three riskiest assumptions and how to test them, with a primary metric and a guardrail metric.
 
-**Design output format.** Unless the user asks for something else, deliver the flow outline (steps and their purpose), a per-screen spec (layout priority, copy direction, primary and secondary actions, states), the rationale for key decisions citing the principle and its grade in a short parenthetical, and a short test plan. When the user wants front end code, apply the same principles in the build and note the reasoning in brief comments or a short summary.
+**Design output format.** Unless the user asks for something else, deliver the flow outline (steps and their purpose), a per-screen spec (layout priority, copy direction, primary and secondary actions, states), 3 structural solution angles when solving hard problems, the rationale citing principles with grades, and a short test plan.
 
 ## Mode 2. Auditing an existing flow or screen
 
 1. **Understand the goal and the user.** Ask, or infer and state, who it is for and what success looks like.
 2. **Walk it as the user.** Go step by step, narrating what a first-time user sees, thinks and feels, including the first 50 milliseconds (gut impression) and the first 5 seconds (can they say what this is and what to do).
-3. **Run the checklist.** Use `references/09-audit-checklist.md`. Log each issue with the violated principle, the evidence grade, a severity score (0 to 4), and a concrete fix.
-4. **Prioritize.** Rank by severity, reach (how many users hit it) and effort. Lead with the few changes that matter most.
-5. **Credit what works.** Name strengths so they survive the redesign.
-6. **Flag ethics and legal risk separately.** Any dark pattern gets called out even if it converts.
+3. **Run the checklist.** Use `references/09-audit-checklist.md`. Log each issue with the violated principle, the evidence grade, a severity score (0 to 4), and the root friction dimension.
+4. **Apply lateral thinking to fixes.** Avoid superficial band-aids (tooltips, bigger buttons). Offer structural fixes and disqualify the obvious weak alternatives.
+5. **Prioritize.** Rank by severity, reach (how many users hit it) and effort. Lead with the few changes that matter most.
+6. **Credit what works.** Name strengths so they survive the redesign.
+7. **Flag ethics and legal risk separately.** Any dark pattern gets called out even if it converts.
 
 **Audit output format.** Use the template at the end of `09-audit-checklist.md`. Keep it scannable, and lead with the top three fixes.
 

@@ -96,6 +96,7 @@ The library is organized into nine focused modules in [`references/`](references
 | [**07. Ethics, Dark Patterns & Law**](references/07-ethics-dark-patterns-law.md) | Dark pattern taxonomy with fair alternatives, evidence on harm, US FTC regulations, EU Digital Services Act (DSA), UK DMCC Act. | Any persuasion, subscriptions, consent, cancellation, or pricing flows. |
 | [**08. Evidence, Myths & Measurement**](references/08-evidence-myths-measurement.md) | Evidence grading criteria, effect-size reality check, comprehensive replication table, debunked UX myths, metrics, A/B testing hygiene, qualitative methods. | When citing numbers, evaluating "laws", or planning experiments. |
 | [**09. Audit Checklist & Template**](references/09-audit-checklist.md) | Comprehensive checklist across all categories, 0–4 severity scale, structured markdown audit report template. | Auditing any existing page, app, screenshot, or user flow. |
+| [**10. Lateral Problem Solving**](references/10-problem-solving-lateral-ux.md) | The 5 friction dimensions, the vanilla trap, 8 lateral thinking moves, the 3-angle mandate, disqualifying superficial fixes. | Diagnosing stuck flows, generating creative structural fixes, and avoiding AI clichés. |
 
 ---
 
@@ -112,10 +113,11 @@ Most UX requests center around a specific user flow. Use this index to jump dire
 ├──────────────────────────────────────┼────────────────────────────────────────────┤
 │ Signup & Onboarding                  │ 04 (Time to Value, Endowed Progress)       │
 │                                      │ 01 (Progressive Disclosure) ✦ 06 (Forms)   │
-│                                      │ 05 (First "Aha" Moment)                    │
+│                                      │ 05 (First "Aha" Moment) ✦ 10 (Timing Shift)│
 ├──────────────────────────────────────┼────────────────────────────────────────────┤
 │ Pricing Page & Paywall               │ 03 (Anchoring, Decoys, Framing, Risk)      │
 │                                      │ 07 (Honest Pricing, Subscription Law)      │
+│                                      │ 10 (Risk Reversal & Anxiety Dissolver)     │
 ├──────────────────────────────────────┼────────────────────────────────────────────┤
 │ Product / Detail Page (PDP)          │ 03 (Reviews, Social Proof, Trust)          │
 │                                      │ 02 (Hierarchy, Imagery) ✦ 01 (Choice)      │
@@ -129,15 +131,20 @@ Most UX requests center around a specific user flow. Use this index to jump dire
 ├──────────────────────────────────────┼────────────────────────────────────────────┤
 │ Dashboards & Data-Heavy UI           │ 01 (Cognitive Load, Defaults)              │
 │                                      │ 02 (Visual Hierarchy, Density)             │
+│                                      │ 10 (Subtractive Solving & Effort Inversion)│
 ├──────────────────────────────────────┼────────────────────────────────────────────┤
 │ Empty, Loading & Error States        │ 05 (Psychology of Waiting, Voice & Tone)   │
 │                                      │ 06 (System Feedback, Error Prevention)     │
+│                                      │ 10 (State Reframing as Springboards)       │
 ├──────────────────────────────────────┼────────────────────────────────────────────┤
 │ Notifications & Re-engagement        │ 04 (Prompts, Habits, Reactance)            │
 │                                      │ 07 (Nagging & Dark Patterns)               │
 ├──────────────────────────────────────┼────────────────────────────────────────────┤
 │ Cancellation & Downgrade             │ 07 (Symmetry Test, Legal Requirements)     │
 │                                      │ 05 (Respectful Endings)                    │
+├──────────────────────────────────────┼────────────────────────────────────────────┤
+│ Stuck or Underperforming Flow        │ 10 (Diagnose 5 Frictions, 8 Lateral Moves) │
+│                                      │ 01 (Cognitive Load) ✦ 09 (Audit Checklist) │
 └──────────────────────────────────────┴────────────────────────────────────────────┘
 ```
 
@@ -166,6 +173,36 @@ Most UX requests center around a specific user flow. Use this index to jump dire
 5. **Credit strengths**: Identify working patterns so redesigns do not regress them.
 6. **Flag dark patterns & legal risks**: Highlight regulatory exposure (FTC, DSA, DMCC).
 7. **Deliver structured report**: Use the output template in [`09`](references/09-audit-checklist.md).
+
+---
+
+## How to Think: Lateral Problem Solving in UX
+
+AI coding assistants frequently fail at UX by prescribing predictable, one-size-fits-all band-aids: adding tooltips `(i)`, slapping modal banners over ignored buttons, making CTAs bigger and greener, or inserting generic onboarding checklists. If an interface requires a tooltip to be understood, the copy or mental model has already failed.
+
+**UX/UI Taste** equips AI agents and human designers with an explicit lateral thinking framework ([`references/10-problem-solving-lateral-ux.md`](references/10-problem-solving-lateral-ux.md)):
+
+### 1. The 5 Friction Dimensions
+Always diagnose the root human friction before touching pixels:
+- **Comprehension Friction**: "I don't understand what this means or what clicking this does." (Mental model clash).
+- **Anxiety & Risk Friction**: "I understand, but fear the consequences: billing, spam, data loss." (Loss aversion).
+- **Cognitive & Motor Friction**: "Demands too much reading, typing, or thumb reach." (Overload).
+- **Timing & Value Asymmetry**: "Asking for commitment before demonstrating value." (Earn the ask violation).
+- **Autonomy & Reactance**: "Feeling coerced, nagged, or trapped." (Dark patterns).
+
+### 2. The 8 Lateral Thinking Moves
+Instead of treating symptoms on the glass, explore structural directions:
+1. **Subtractive Solving**: Delete the step, infer the data, or eliminate the question via smart defaults.
+2. **Timing Shift**: Move the ask to the moment of post-value motivation (e.g. at export, not on landing).
+3. **Effort Inversion**: Shift labor from human fingers to software logic (Tesler's law).
+4. **Contextual Relocation**: Bring controls directly into inline focus/hover rather than remote toolbars.
+5. **Radical Risk Reversal**: Dissolve fear directly at the trigger (*"No credit card required. Cancel in 1 click."*).
+6. **State Reframing**: Turn empty, loading, or 404 dead ends into high-momentum springboards.
+7. **Progressive Engagement**: Replace walls of effort with a 1-second starter commitment.
+8. **Assumption Inversion**: Challenge industry dogma and test the plausible opposite.
+
+### 3. The Three-Angle Mandate & Disqualification Check
+When recommending fixes for hard problems, the AI must never offer 3 minor variations of the same button. It must provide **3 distinct structural directions** (*Angle A: Subtractive / System*, *Angle B: Cognitive / Clarity*, *Angle C: Lateral / Structural Shift*) and explicitly name why the obvious "vanilla" band-aid was disqualified.
 
 ---
 
@@ -278,7 +315,8 @@ ux-ui-taste/
     ├── 06-feedback-control-forms.md        # Heuristics, form design, validation, checkout UX
     ├── 07-ethics-dark-patterns-law.md      # Dark patterns catalog, alternatives, FTC/DSA law
     ├── 08-evidence-myths-measurement.md    # Evidence grades, debunked myths, A/B testing
-    └── 09-audit-checklist.md               # 0–4 severity checklist and markdown audit template
+    ├── 09-audit-checklist.md               # 0–4 severity checklist and markdown audit template
+    └── 10-problem-solving-lateral-ux.md    # Lateral thinking, 5 friction types, 8 structural moves
 ```
 
 ---
