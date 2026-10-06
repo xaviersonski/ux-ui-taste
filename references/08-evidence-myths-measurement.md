@@ -36,9 +36,23 @@ When an effect is graded A in the lab but untested in product contexts, say so (
 | Default effect | Robust, heterogeneous | A | Jachimowicz et al. 2019, d = 0.68 |
 | Anchoring | Robust | A | Replicated in Many Labs |
 | Peak-end rule | Robust | A | Alaybek et al. 2022, 174 effect sizes |
-| Fitts's law | Robust | A | Decades of HCI replication |
+| Fitts's law & target distance | Robust | A | Decades of HCI replication; Fitts 1954 |
+| Law of Proximity (Gestalt) | Robust | A | Wertheimer 1923, foundational perceptual psychology |
+| Law of Similarity (Gestalt) | Robust | A | Wertheimer 1923, visual grouping |
+| Law of Uniform Connectedness | Robust | A | Palmer and Rock 1994, overrides proximity |
+| Law of Prägnanz (Simplicity) | Robust | A | Wertheimer 1923, Köhler 1929 |
+| Von Restorff (isolation) effect | Robust | A | von Restorff 1933, perceptual salience |
+| Serial position effect (primacy/recency) | Robust | A | Ebbinghaus 1885, Murdock 1962 |
+| Working memory chunking (4±1) | Robust | A | Cowan 2001 (revising Miller 1956) |
 | Implementation intentions | Robust | A | Gollwitzer and Sheeran 2006, d = 0.65 |
 | Processing fluency | Robust | A | Reber et al. 2004 |
+| Hick's law | Robust in RT, conditional in UI | A to B | Hick 1952, Hyman 1953; breaks on complex trade-offs |
+| Jakob's law | Supported heuristic | B | Nielsen 2000; schema theory |
+| Tesler's law (complexity conservation) | Supported heuristic | B | Tesler 1984, Xerox PARC |
+| Postel's law (robustness principle) | Supported standard | B | Postel 1980, RFC 760/793 |
+| Occam's razor (parsimony in UI) | Foundational heuristic | B | Maeda 2006, Lidwell et al. 2010 |
+| Pareto principle (80/20 usage) | Supported telemetry | B | Telemetry power-law distributions; Juran 1941 |
+| Parkinson's law (task time expansion) | Supported | B | Parkinson 1955; behavioral economics |
 | Choice overload | Conditional | B | Near-zero mean (Scheibehenne 2010), real under four moderators (Chernev 2015) |
 | Loss aversion | Real, magnitude debated | B | Gal and Rucker 2018 |
 | Goal gradient | Supported | B | Kivetz et al. 2006 |
@@ -47,12 +61,13 @@ When an effect is graded A in the lab but untested in product contexts, say so (
 | IKEA effect | Supported | B | Norton et al. 2012 |
 | Social norms nudges | Real, modest at scale | B | Allcott 2011 about 2% |
 | Aesthetic-usability effect | Mixed, can reverse after use | B | Tuch et al. 2012 |
+| Doherty threshold 400 ms | Supported for flow | B to C | Doherty and Thadani 1982, Google CWV |
+| Inline validation gains | Small sample | B to C | Wroblewski and Etre 2009, n = 22 |
 | Decoy effect | Weakens with realistic stimuli | C | Frederick et al. 2014 |
 | Skeleton screens feel faster | Mixed | C | Viget 2017 found the opposite |
-| Doherty threshold 400 ms | Old single source | C | Doherty and Thadani 1982 |
-| Inline validation gains | Small sample | B to C | Wroblewski and Etre 2009, n = 22 |
+| Ovsiankina resumption effect | Supported | B | Ghibellini and Meier 2025 meta-analysis |
 | Zeigarnik memory effect | Failed to replicate | D | Ghibellini and Meier 2025 |
-| Ovsiankina resumption effect | Supported | B | Same meta-analysis |
+| Miller's law (7±2) for menus | Failed / Myth | D | Menus rely on visual recognition, not recall |
 | Ego depletion | Failed large replications | D | Hagger et al. 2016 registered replication |
 | Social priming (e.g. elderly-walking) | Failed replications | D | Doyen et al. 2012 |
 

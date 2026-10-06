@@ -21,6 +21,7 @@ What gets people started, keeps them going, and brings them back.
 16. Personalized onboarding
 17. Prompts, notifications and permission timing
 18. Reactance
+19. Parkinson's law (task duration and focused flow)
 
 ---
 
@@ -228,3 +229,17 @@ What gets people started, keeps them going, and brings them back.
 - Don't block content behind aggressive gates on first visit.
 
 **Audit question.** Does any message make the user feel cornered?
+
+## 19. Parkinson's law (task duration and focused flow)
+**Evidence** B (Parkinson 1955; behavioral economics and temporal discounting research).
+
+**What it says.** "Work expands so as to fill the time available for its completion." When workflows are ambiguous, meandering, or open-ended, users hesitate, get distracted, multi-task, and abandon. Conversely, compact, structured flows with clear progress and brisk momentum focus attention and accelerate completion.
+
+**Apply.**
+- **Reduce task completion time.** Eliminate unnecessary form steps, auto-format inputs, and defer secondary account setup so the core loop finishes fast.
+- Provide clear expectations upfront: "Takes under 2 minutes" or "3 short steps" anchors perceived time and motivates immediate completion.
+- When holding high-demand real-world inventory (event tickets, appointments), use clear, honest hold timers ("Held for 10:00 minutes") to preserve focus without resorting to dark patterns.
+
+**Limits.** Never use deceptive, fake countdown timers or fabricated urgency—they destroy brand trust and violate consumer protection laws (see 07). For high-stakes, irreversible financial or legal choices, do not rush users; allow deliberation.
+
+**Audit question.** Does this flow compress unnecessary delays and prime prompt, focused completion without inducing false panic?

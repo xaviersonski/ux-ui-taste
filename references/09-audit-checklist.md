@@ -23,17 +23,21 @@ Prioritize by severity, then by reach (how many users hit it), then by effort.
 - [ ] Does the user ever have to remember information from a previous screen? (working memory)
 - [ ] At key decisions, are choices limited, organized and is one recommended? (Hick, choice overload)
 - [ ] Are advanced options tucked away but easy to reach? (progressive disclosure)
+- [ ] Could this interface achieve the exact same user outcome with fewer elements, concepts or steps? (Occam's razor)
+- [ ] Are the vital 20% of core tasks dominant, rather than cluttering the screen with the 80% rare actions? (Pareto principle)
 - [ ] Does the system do work the user is currently doing (detecting, calculating, formatting)? (Tesler)
 - [ ] Do conventions match what users know from other products? (Jakob's law)
 - [ ] Is terminology consistent across screens? (consistency)
 - [ ] Is the copy plain enough for a tired person on a phone? (plain language)
 
 ## C. Visual and interaction design (02, 06)
-- [ ] Does spacing alone show what belongs together? (Gestalt proximity)
+- [ ] Does spacing (proximity) and containers/connectors (uniform connectedness) make it clear what belongs together? (Gestalt proximity, uniform connectedness)
+- [ ] Do elements with identical functions share identical styling, and are non-clickable elements distinct? (Law of similarity)
+- [ ] Does the visual layout resolve into clean, symmetrical, and regular geometric structures without visual clutter? (Law of Prägnanz)
 - [ ] Can users get the gist from headings and first words? (scanning)
 - [ ] Is it obvious what's clickable? (signifiers)
 - [ ] Do icons have labels? (icon usability)
-- [ ] Are targets at least 24 px, primary touch targets 44 to 48 px, with spacing? (Fitts, target size)
+- [ ] Are targets at least 24 px, primary touch targets 44 to 48 px, and placed near the user's thumb or focus? (Fitts's law, target distance)
 - [ ] Do text and controls meet contrast minimums, and does meaning survive without color? (contrast)
 - [ ] Is body text at least 16 px with comfortable line length and height? (typography)
 - [ ] Are animations fast, purposeful and disabled for reduced motion? (motion)
@@ -75,6 +79,7 @@ Prioritize by severity, then by reach (how many users hit it), then by effort.
 - [ ] Do multi-step flows show named steps and progress, with fast early steps? (progress indicators)
 - [ ] Is progress already made visible? (endowed progress)
 - [ ] Can users see how close the next meaningful milestone is? (goal gradient)
+- [ ] Does the flow compress unnecessary steps and prime brisk, focused completion without artificial panic? (Parkinson's law)
 - [ ] Do users create or personalize something early? (IKEA, endowment)
 - [ ] Are permissions requested in context with a clear benefit? (permission timing)
 - [ ] Does any copy feel coercive? (reactance)
@@ -97,6 +102,7 @@ Prioritize by severity, then by reach (how many users hit it), then by effort.
 - [ ] Is redundant entry avoided, and is authentication free of memory tests?
 
 ## J. Performance (05)
+- [ ] Does every action give visible feedback within 100 ms and complete transitions within the 400 ms Doherty threshold? (Doherty threshold, response times)
 - [ ] LCP under 2.5 s, INP under 200 ms, CLS under 0.1 on mobile?
 - [ ] No layout shift during load?
 - [ ] Is the loading pattern suited to the wait length, without flicker?

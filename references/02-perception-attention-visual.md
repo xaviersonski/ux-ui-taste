@@ -15,7 +15,7 @@ How people see a screen, where their eyes and fingers go, and how visual quality
 10. Banner blindness
 11. Von Restorff (isolation) effect
 12. Serial position effect
-13. Fitts's law
+13. Fitts's law and target distance
 14. Touch target size and the thumb zone
 15. Affordances and signifiers
 16. Icons and labels
@@ -93,17 +93,24 @@ How people see a screen, where their eyes and fingers go, and how visual quality
 **Audit question.** With the screen blurred, is the most important element the most visible one?
 
 ## 6. Gestalt principles
-**Evidence** A for perception. B for application.
+**Evidence** A for perceptual psychology (Wertheimer 1923, Koffka 1935, Palmer and Rock 1994). B for UI layout application.
 
-**What it says.** People group what is close (proximity), similar (similarity), enclosed together (common region), aligned or flowing (continuity), and complete shapes (closure). They separate figure from ground.
+**What it says.** The human visual system automatically organizes sensory stimuli into structured groups and coherent wholes rather than isolated parts. Four laws dominate digital interfaces:
 
-**Apply.**
-- Space between groups larger than space within groups. Labels sit closer to their own field than to the previous field.
-- Same style for same function.
-- Cards and containers to group related content, used sparingly.
-- Align to a grid so the eye follows clean lines.
+1. **Law of Proximity ("Group-related information").** Elements close together are perceived as belonging to the same functional group.
+   - Spacing within a group must be noticeably smaller than spacing between groups ($4\text{px}/8\text{px}$ internal padding vs $16\text{px}/24\text{px}$ group separation).
+   - Form field labels must sit closer to their respective input than to the preceding field.
+2. **Law of Similarity ("Connect related elements visually").** Elements sharing visual traits (color, shape, typography, size, orientation) are perceived as sharing the same function.
+   - Use identical styling for identical behavior (e.g. all interactive links share one accent color; all destructive actions share red styling).
+   - Never style static badges or tags to look like clickable action pills.
+3. **Law of Uniform Connectedness ("Connect related elements visually").** Elements physically connected by lines, arrows, borders, or enclosed within a contiguous background container are perceived as more strongly related than elements related only by proximity or similarity (Palmer and Rock 1994).
+   - Uniform connectedness overrules proximity: enclosing related fields within a card or linking steps with a progress rule immediately establishes a functional unit.
+   - Use connected step indicators, grouped segmented controls, and card wrappers to organize multi-part data.
+4. **Law of Prägnanz / Good Gestalt ("Simplify complex interfaces").** The brain resolves ambiguous, complex, or incomplete visual stimuli into the simplest, most symmetrical, and regular interpretation possible to minimize perceptual effort.
+   - Use clean geometric alignment, clear rectangular containers, and consistent grid columns.
+   - Remove visual clutter, unnecessary borders, and competing shapes so the visual structure resolves instantly without eye strain.
 
-**Audit question.** Does spacing alone make it clear what belongs together?
+**Audit question.** Does spacing and visual connectedness alone make it immediately obvious what belongs together, without needing text instructions?
 
 ## 7. Scanning patterns
 **Evidence** B (NN/g eyetracking studies 2006 to 2017).
@@ -175,18 +182,20 @@ How people see a screen, where their eyes and fingers go, and how visual quality
 
 **Audit question.** Are the most important items at the start or end of lists and menus?
 
-## 13. Fitts's law
-**Evidence** A (Fitts 1954, extensively replicated in HCI).
+## 13. Fitts's law and target distance
+**Evidence** A (Fitts 1954, extensively replicated in HCI and motor ergonomics).
 
-**What it says.** Time to hit a target depends on its distance and size. Big, close targets are fast. Screen edges and corners act as infinitely deep targets on desktop.
+**What it says.** The time required to rapidly move to a target area is a function of the ratio between the distance to the target and the width of the target: $MT = a + b \log_2\left(\frac{2D}{W}\right)$. Rapid interaction requires optimizing two levers:
+1. **Make targets large ($W$).** Larger interactive boundaries decrease acquisition time and reduce motor errors.
+2. **Place key actions nearby ($D$).** Minimizing the distance the cursor or thumb must travel dramatically accelerates task completion. Screen edges and corners act as infinitely deep targets on desktop because the cursor cannot overshoot.
 
 **Apply.**
-- Make primary actions large and place them near where the user's attention or cursor already is.
-- Keep related actions close together and destructive actions away from frequent ones.
-- On mobile, full-width primary buttons near the bottom for key flows.
-- Make the whole card or row clickable, not just the text.
+- **Make targets large.** Enlarge the entire card or list row to make it clickable, not just small blue text. Maintain at least $44\times44\text{ px}$ for primary touch actions.
+- **Place key actions nearby.** Position contextual controls directly beside the content being manipulated (e.g. inline hover actions on table rows, bottom sheets near thumbs on mobile).
+- Keep related action sequences clustered to minimize travel distance.
+- **Separate destructive actions.** Intentionally increase distance $D$ for irreversible actions (e.g. Delete, Cancel Subscription) to prevent accidental misclicks.
 
-**Audit question.** Are frequent and important targets large and close, and are risky targets separated from them?
+**Audit question.** Are frequent targets both large and placed near the user's focus, while destructive targets are intentionally distanced?
 
 ## 14. Touch target size and the thumb zone
 **Evidence** Standards plus B. WCAG 2.2 Success Criterion 2.5.8 (AA) requires targets of at least 24 by 24 CSS pixels or adequate spacing. 2.5.5 (AAA) asks for 44 by 44. Apple's guidelines recommend 44 by 44 points and Material Design 48 by 48 dp. Hoober's 2013 observational study found many users hold phones one-handed and shift grip often.

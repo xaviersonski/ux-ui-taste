@@ -52,20 +52,49 @@ Whenever citing a principle or recommending a change, cite its evidence grade:
 
 ---
 
+## The Twenty Taste Maxims & UX Laws
+
+Every interaction recommendation in this library is anchored by twenty rapid-reference maxims grounded in empirical cognitive psychology and human-computer interaction:
+
+| Maxim | Principle / Scientific Law | Grade | Focus & Application |
+|---|---|:---:|---|
+| **Reduce choices per screen.** | **Hick's Law** | **A/B** | Minimize fork options; highlight a recommended path to prevent choice overload. ([01](references/01-cognitive-load.md)) |
+| **Make targets large.** | **Fitts's Law** | **A** | Expand hit boundaries ($\ge 44\times44\text{ px}$ on touch, full card links). ([02](references/02-perception-attention-visual.md)) |
+| **Follow familiar patterns.** | **Jakob's Law** | **B** | Match standard conventions from the rest of the web to leverage existing mental models. ([01](references/01-cognitive-load.md)) |
+| **Group-related information.** | **Law of Proximity** | **A** | Internal spacing must be noticeably smaller than external group separation. ([02](references/02-perception-attention-visual.md)) |
+| **Break content into chunks.** | **Miller's Law & Chunking** | **A** | Chunk working memory into $4\pm1$ clusters (numbers, steps, forms; not 7-item menus). ([01](references/01-cognitive-load.md)) |
+| **Interactions within 400 milliseconds.** | **Doherty Threshold** | **B/C** | Respond under $100\text{ ms}$; resolve state within $400\text{ ms}$ to sustain continuous flow. ([05](references/05-emotion-memory-delight.md)) |
+| **Highlight the primary action.** | **Von Restorff Effect** | **A/B** | Establish one visually dominant focal point (CTA) using isolation and contrast. ([02](references/02-perception-attention-visual.md)) |
+| **Place key actions nearby.** | **Minimize Target Distance** | **A** | Fitts's corollary: keep controls near cursor/thumb reach; distance destructive actions. ([02](references/02-perception-attention-visual.md)) |
+| **Put essentials first.** | **Serial Position Effect & Pareto** | **A/B** | Front-load the vital 20% benefits and primary navigation; leverage primacy and recency. ([01](references/01-cognitive-load.md), [02](references/02-perception-attention-visual.md)) |
+| **End flows memorably.** | **Peak-End Rule** | **A** | Fix the worst frustration first; turn confirmation screens into rewarding endings. ([05](references/05-emotion-memory-delight.md)) |
+| **Show visible progress.** | **Goal-Gradient & Endowed Progress** | **B** | Effort accelerates near milestones; show progress and reward real early steps. ([04](references/04-motivation-habit-progress.md)) |
+| **Simplify complex interfaces.** | **Law of Prägnanz & Occam's Razor** | **A/B** | Resolve layouts into clean geometric harmony; cut gratuitous UI elements. ([01](references/01-cognitive-load.md), [02](references/02-perception-attention-visual.md)) |
+| **Use sensible defaults.** | **Default Effect (Status Quo Bias)** | **A** | Answer questions for the majority by default, with effortless opt-outs. ([01](references/01-cognitive-load.md), [03](references/03-decision-persuasion-pricing.md)) |
+| **Prevent errors proactively.** | **Error Prevention (Poka-Yoke)** | **B** | Constrain inputs, auto-format fields, and confirm only irreversible operations. ([06](references/06-feedback-control-forms.md)) |
+| **Make errors recoverable.** | **Postel's Law & Forgiveness** | **B** | Be liberal in input tolerance; provide instant undo over disruptive modal alerts. ([06](references/06-feedback-control-forms.md)) |
+| **Maintain pattern consistency.** | **Consistency & Standards** | **B** | Identical visual appearance must always signify identical function across all screens. ([01](references/01-cognitive-load.md), [06](references/06-feedback-control-forms.md)) |
+| **Connect related elements visually.** | **Uniform Connectedness & Similarity** | **A** | Containers, borders, and shared styling visually overrule mere proximity. ([02](references/02-perception-attention-visual.md)) |
+| **Reduce task completion time.** | **Parkinson's Law** | **B** | Work expands to fill available time; compact, brisk flows reduce drop-off and fatigue. ([04](references/04-motivation-habit-progress.md)) |
+| **Reveal complexity gradually.** | **Progressive Disclosure & Tesler** | **B** | Shift complexity to the system; surface advanced options only upon demand. ([01](references/01-cognitive-load.md)) |
+| **Make completion feel closer.** | **Endowed Progress & Ovsiankina** | **B** | Frame tasks as underway; make resuming interrupted workflows effortless. ([04](references/04-motivation-habit-progress.md)) |
+
+---
+
 ## Reference Library
 
 The library is organized into nine focused modules in [`references/`](references/):
 
 | Module | Core Topics Covered | When to Read |
 |---|---|---|
-| [**01. Cognitive Load**](references/01-cognitive-load.md) | Working memory, Hick's law, choice overload, progressive disclosure, recognition over recall, mental models, Jakob's law, information scent, plain language. | Screens with choices, navigation, dense information, or unfamiliar concepts. |
-| [**02. Perception & Visual**](references/02-perception-attention-visual.md) | Visual hierarchy, Gestalt laws, scanning patterns (F, Z), the fold, Fitts's law, touch targets, first impressions, typography, color contrast, motion. | Layout, visual hierarchy, responsive & mobile UI, landing pages. |
+| [**01. Cognitive Load**](references/01-cognitive-load.md) | Working memory, Hick's law, choice overload, progressive disclosure, recognition over recall, mental models, Jakob's law, Occam's razor, Pareto principle, plain language. | Screens with choices, navigation, dense information, feature prioritization, or unfamiliar concepts. |
+| [**02. Perception & Visual**](references/02-perception-attention-visual.md) | Visual hierarchy, Gestalt laws (proximity, similarity, uniform connectedness, Prägnanz), scanning patterns, the fold, Fitts's law & target distance, touch targets, first impressions, typography, contrast, motion. | Layout, visual hierarchy, responsive & mobile UI, landing pages. |
 | [**03. Decision, Persuasion & Pricing**](references/03-decision-persuasion-pricing.md) | Defaults, anchoring, decoys, framing, loss aversion, zero price effect, cost transparency, social proof, reviews, trust cues, risk reversal. | Pricing pages, paywalls, product detail pages, signup flows, CTAs. |
-| [**04. Motivation & Progress**](references/04-motivation-habit-progress.md) | Fogg Behavior Model, time-to-value ("aha" moment), goal gradient, endowed progress, progress indicators, IKEA effect, flow, habits, reactance. | Onboarding, activation, retention, multi-step flows, gamification. |
-| [**05. Emotion, Memory & Delight**](references/05-emotion-memory-delight.md) | Peak-end rule, Kano model, microinteractions, labor illusion, psychology of waiting, perceived performance, error tone, voice, celebrations. | Loading states, confirmations, micro-delighters, service recovery. |
+| [**04. Motivation & Progress**](references/04-motivation-habit-progress.md) | Fogg Behavior Model, time-to-value, goal gradient, endowed progress, progress indicators, Parkinson's law, IKEA effect, flow, habits, reactance. | Onboarding, activation, retention, multi-step flows, task completion, gamification. |
+| [**05. Emotion, Memory & Delight**](references/05-emotion-memory-delight.md) | Peak-end rule, Kano model, microinteractions, labor illusion, psychology of waiting, Doherty threshold & response times, error tone, voice, celebrations. | Loading states, latency budgets, confirmations, micro-delighters, service recovery. |
 | [**06. Feedback, Control & Forms**](references/06-feedback-control-forms.md) | Nielsen heuristics, visibility of status, undo vs. confirm, error prevention, Postel's law, inline validation, form & checkout essentials, modals. | Forms, checkouts, settings, account creation, mobile interactions. |
 | [**07. Ethics, Dark Patterns & Law**](references/07-ethics-dark-patterns-law.md) | Dark pattern taxonomy with fair alternatives, evidence on harm, US FTC regulations, EU Digital Services Act (DSA), UK DMCC Act. | Any persuasion, subscriptions, consent, cancellation, or pricing flows. |
-| [**08. Evidence, Myths & Measurement**](references/08-evidence-myths-measurement.md) | Evidence grading criteria, effect-size reality check, replication table, debunked UX myths, metrics, A/B testing hygiene, qualitative methods. | When citing numbers, evaluating "laws", or planning experiments. |
+| [**08. Evidence, Myths & Measurement**](references/08-evidence-myths-measurement.md) | Evidence grading criteria, effect-size reality check, comprehensive replication table, debunked UX myths, metrics, A/B testing hygiene, qualitative methods. | When citing numbers, evaluating "laws", or planning experiments. |
 | [**09. Audit Checklist & Template**](references/09-audit-checklist.md) | Comprehensive checklist across all categories, 0–4 severity scale, structured markdown audit report template. | Auditing any existing page, app, screenshot, or user flow. |
 
 ---

@@ -21,6 +21,8 @@ How much thinking a screen demands, and how to reduce the thinking that doesn't 
 16. Plain language
 17. Interruption and resumption
 18. Smart defaults as load reducers
+19. Occam's razor (law of parsimony)
+20. Pareto principle (80/20 rule and UI density)
 
 ---
 
@@ -260,3 +262,31 @@ How much thinking a screen demands, and how to reduce the thinking that doesn't 
 **Limits.** Defaults that serve the business at the user's expense (pre-ticked add-ons, opt-in marketing) are dark patterns and in many places illegal.
 
 **Audit question.** Does each question have a sensible default that most users would choose anyway?
+
+## 19. Occam's razor (law of parsimony)
+**Evidence** B as an established design heuristic and epistemological principle (Maeda 2006, *The Laws of Simplicity*; Lidwell et al. 2010).
+
+**What it says.** "Entities should not be multiplied beyond necessity" (William of Ockham). Given two functional designs that achieve the exact same user outcome, the simpler one with fewer elements, fewer concepts, and fewer steps is superior.
+
+**Apply.**
+- **Simplify complex interfaces.** Evaluate every visual container, button, label, and configuration switch. If deleting it does not degrade user comprehension or task completion, delete it.
+- Choose the interface pattern that introduces the fewest new mental models.
+- Avoid solving an edge case by burdening the 99% path with new toggles or confirmation dialogs.
+
+**Limits.** Simplicity is not raw minimalism. Stripping away necessary context, signifiers, or labels causes "mystery meat navigation" and increases cognitive load rather than reducing it.
+
+**Audit question.** Could this interface achieve the exact same outcome with fewer elements, concepts, or steps?
+
+## 20. Pareto principle (80/20 rule and UI density)
+**Evidence** B (ubiquitous empirical power-law distribution in software telemetry and product usage analytics; Juran 1941, Pareto 1896).
+
+**What it says.** In digital products, roughly 80% of user activity and value concentrates within 20% of core features. Interfaces that give equal visual prominence to every capability overwhelm users.
+
+**Apply.**
+- **Put essentials first.** Dedicate primary visual real estate, top navigation, and default views to the vital 20% of user tasks.
+- Relegate the trivial 80% to secondary menus, overflow sheets, or advanced tabs using progressive disclosure.
+- When designing toolbars or command bars, keep the vital 3 to 5 actions exposed and group the rest behind an overflow menu.
+
+**Limits.** The 80/20 ratio is an empirical observation, not an ironclad mathematical constant (actual splits range from 70/30 to 95/5). Long-tail power features still need predictable, accessible discovery paths.
+
+**Audit question.** Are the vital 20% most frequent actions visually dominant, or is the screen cluttered by giving equal weight to the 80% rare actions?

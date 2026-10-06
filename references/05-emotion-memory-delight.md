@@ -11,7 +11,7 @@ How experiences feel in the moment and how they are remembered afterwards. Satis
 6. Microinteractions
 7. Labor illusion and operational transparency
 8. Psychology of waiting
-9. Response time limits
+9. Response time limits and the Doherty threshold
 10. Perceived performance techniques
 11. Skeleton screens and spinners
 12. Optimistic UI
@@ -129,20 +129,24 @@ How experiences feel in the moment and how they are remembered afterwards. Satis
 
 **Audit question.** For every wait, do users know how long, why, and that it's working?
 
-## 9. Response time limits
-**Evidence** A to B (Miller 1968. Card, Moran and Newell 1983. Nielsen 1993). C for the Doherty threshold of 400 ms as a productivity claim (Doherty and Thadani 1982, an IBM paper).
+## 9. Response time limits and the Doherty threshold
+**Evidence** A for sensory reaction time (Miller 1968; Card, Moran and Newell 1983; Nielsen 1993). B for user productivity and flow preservation under 400 ms (Doherty and Thadani 1982 IBM research report; Google Core Web Vitals data).
 
-**What it says.** About 0.1 s feels instant. About 1 s keeps flow of thought but the delay is noticed. About 10 s is the limit of attention, beyond which users switch tasks.
+**What it says.** Computer response time dictates the cognitive rhythm of human interaction. When computer response time drops below 400 ms, user interaction rate and productivity increase non-linearly because neither party is forced to wait for the other, keeping the user in a continuous cognitive flow state.
+- **$\le 100\text{ ms}$ (Instantaneous):** The user feels direct, physical manipulation. Required for button presses, hover states, input typing, and toggle switches.
+- **$\le 400\text{ ms}$ (Doherty Threshold):** **Interactions within 400 milliseconds.** The upper boundary for keeping user-system dialogue seamless and preventing the user's mind from wandering to secondary thoughts. UI state updates, dropdown opens, and client filtering should resolve within this window.
+- **$1.0\text{ s}$ (Flow Limit):** The user notices a delay, but their train of thought remains intact. A subtle inline loader or progress indicator is required.
+- **$10\text{ s}$ (Attention Limit):** The absolute boundary of single-task attention. Beyond 10 seconds, users switch tabs, multitask, or abandon. Demands determinate progress bars and background notifications.
 
 **Apply.**
-- Under 100 ms, no indicator needed. Respond visually to every input within 100 ms, even if the work takes longer.
-- 1 to 10 s, show a loading state.
-- Over 10 s, show determinate progress, allow the user to do other things, and notify on completion.
-- Track Core Web Vitals. Google's "good" thresholds are Largest Contentful Paint under 2.5 s, Interaction to Next Paint under 200 ms, and Cumulative Layout Shift under 0.1.
+- **Interactions within 400 milliseconds.** Ensure client-side interactions, modal appearances, and view filtering complete within 400 ms.
+- Provide immediate sensory feedback within 100 ms (pressed states, skeleton shells, instant checkbox ticks).
+- For asynchronous requests exceeding 400 ms, employ **Optimistic UI** (render the predicted success state immediately in the client and roll back gracefully on error).
+- Target Google Core Web Vitals benchmarks: Largest Contentful Paint (LCP) under 2.5 s, Interaction to Next Paint (INP) under 200 ms, and Cumulative Layout Shift (CLS) under 0.1.
 
-**Real speed matters.** Google and Deloitte's "Milliseconds Make Millions" study (37 brands, 2019 data) found a 0.1 s mobile speed improvement was associated with an 8.4% higher retail conversion rate and 10.1% for travel. It was commissioned by Google and based on natural variation, so treat the exact numbers as grade C and the direction as grade B.
+**Real speed matters.** Google and Deloitte's "Milliseconds Make Millions" study found a 0.1 s mobile speed improvement yielded an 8.4% lift in retail conversions and 10.1% in travel. Treat exact magnitudes as Grade C (correlational) and the directional impact as Grade B.
 
-**Audit question.** Does every action produce visible feedback within 100 ms, and do pages meet Core Web Vitals?
+**Audit question.** Does every user action produce visible feedback within 100 ms, and do transitions and feedback complete within the 400 ms Doherty threshold?
 
 ## 10. Perceived performance techniques
 **Evidence** B to C.

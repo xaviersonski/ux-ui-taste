@@ -35,20 +35,45 @@ Use these grades whenever citing a principle, in both modes.
 
 Detail on effect sizes, replication status and common myths is in `references/08-evidence-myths-measurement.md`. A key calibration point is that nudges published in academic journals averaged an 8.7 percentage point effect, while the same kinds of nudges run at scale by government nudge units averaged 1.4 points (DellaVigna and Linos 2022). Expect small, real gains from single tactics, and larger gains from removing genuine friction.
 
+## The twenty taste maxims and UX laws
+
+When auditing, planning or designing an interface, use these twenty core maxims. Each pairs a practical design behavior with its underlying psychological law and evidence grade:
+
+1. **Reduce choices per screen.** — *Hick's Law* (Grade A in RT, B in UI, `01`). Cut extraneous options at key decision forks; highlight one recommended path to prevent choice paralysis.
+2. **Make targets large.** — *Fitts's Law* (Grade A, `02`). Enlarge touch boundaries to $\ge 44\times44\text{ px}$ and make whole cards clickable, not just small text links.
+3. **Follow familiar patterns.** — *Jakob's Law* (Grade B, `01`). Users spend most of their time on other products; leverage established conventions for navigation, search, and checkout.
+4. **Group-related information.** — *Law of Proximity* (Grade A, `02`). Keep internal group spacing noticeably tighter than external boundaries ($8\text{px}$ vs $24\text{px}$).
+5. **Break content into chunks.** — *Miller's Law & Working Memory Limits* (Grade A for $4\pm1$ chunks in working memory, `01`; Grade D myth for 7-item visible menus). Chunk long numbers, forms, and dense data into digestible clusters.
+6. **Interactions within 400 milliseconds.** — *Doherty Threshold* (Grade B/C, `05`). Maintain conversational cognitive flow with visual feedback under $100\text{ ms}$ and state completions within $400\text{ ms}$.
+7. **Highlight the primary action.** — *Von Restorff (Isolation) Effect* (Grade A for memory, B in UI, `02`). Ensure the single primary action is the visually dominant focal point on screen.
+8. **Place key actions nearby.** — *Minimize Target Distance / Fitts's Law Corollary* (Grade A, `02`). Position contextual controls adjacent to cursor focus or in the mobile thumb zone; isolate destructive actions.
+9. **Put essentials first.** — *Serial Position Effect & Pareto Principle* (Grade A & B, `01`, `02`). Prioritize the vital 20% of core actions and benefits at the start and end of lists, menus, and pages.
+10. **End flows memorably.** — *Peak-End Rule* (Grade A, `05`). Eliminate the worst point of friction and craft a reassuring, celebratory confirmation screen that bridges to what's next.
+11. **Show visible progress.** — *Goal-Gradient Effect & Endowed Progress* (Grade B, `04`). People accelerate effort as milestones near; break long flows into named stages.
+12. **Simplify complex interfaces.** — *Law of Prägnanz & Occam's Razor* (Grade A & B, `01`, `02`). Resolve visual elements into clean geometric harmony; never multiply entities, steps, or toggles beyond necessity.
+13. **Use sensible defaults.** — *Default Effect & Status Quo Bias* (Grade A, `01`, `03`). Answer the question for the majority to save mental effort, with effortless opt-outs.
+14. **Prevent errors proactively.** — *Error Prevention (Poka-Yoke)* (Grade B, `06`). Constrain inputs, auto-format fields, and confirm only irreversible actions.
+15. **Make errors recoverable.** — *Postel's Law & Forgiveness* (Grade B, `06`). Be liberal in what you accept; provide instant undo rather than disruptive "Are you sure?" prompts.
+16. **Maintain pattern consistency.** — *Consistency & Standards / Jakob's Law* (Grade B, `01`, `06`). Identical appearance must always signify identical behavior across all screens.
+17. **Connect related elements visually.** — *Law of Uniform Connectedness & Similarity* (Grade A, `02`). Grouping by containers, borders, and connectors visually overrules mere proximity.
+18. **Reduce task completion time.** — *Parkinson's Law* (Grade B, `04`). Work expands to fill available time; compact, brisk flows reduce hesitation, drop-off, and distraction.
+19. **Reveal complexity gradually.** — *Progressive Disclosure & Tesler's Law* (Grade B, `01`). Shift complexity to the software; keep the surface clean while exposing advanced tools on demand.
+20. **Make completion feel closer.** — *Endowed Progress & Ovsiankina Resumption* (Grade B, `04`). Frame progress as already underway and make resuming interrupted tasks seamless.
+
 ## Principle library
 
 Read only the files relevant to the task. Each principle entry has the same shape, which is what it says, the evidence grade, how to apply it, its limits, and an audit question.
 
 | File | Covers | Read when |
 |---|---|---|
-| `references/01-cognitive-load.md` | Working memory, Hick's law, choice overload, progressive disclosure, recognition over recall, mental models, Jakob's law, information scent, plain language | Any screen with choices, navigation, dense information or new concepts |
-| `references/02-perception-attention-visual.md` | Visual hierarchy, Gestalt, scanning patterns, the fold, Fitts's law, target sizes, first impressions, aesthetics, typography, color, contrast, motion | Layout, visual design, mobile, landing pages, anything visual |
+| `references/01-cognitive-load.md` | Working memory, Hick's law, choice overload, progressive disclosure, recognition over recall, mental models, Jakob's law, Occam's razor, Pareto principle, plain language | Any screen with choices, navigation, dense information, feature prioritization or new concepts |
+| `references/02-perception-attention-visual.md` | Visual hierarchy, Gestalt (proximity, similarity, uniform connectedness, Prägnanz), scanning patterns, the fold, Fitts's law & target distance, target sizes, first impressions, typography, color, contrast, motion | Layout, visual design, mobile, landing pages, anything visual |
 | `references/03-decision-persuasion-pricing.md` | Defaults, anchoring, decoys, framing, loss aversion, pricing psychology, social proof, reviews, trust, scarcity, urgency, reciprocity, risk reversal | Pricing pages, paywalls, product pages, signup, plan selection, CTAs |
-| `references/04-motivation-habit-progress.md` | Fogg model, goal gradient, endowed progress, progress bars, IKEA effect, self-determination theory, flow, habits, rewards, implementation intentions, reactance | Onboarding, activation, retention, gamification, multi-step flows |
-| `references/05-emotion-memory-delight.md` | Peak-end rule, Kano, delight, microinteractions, labor illusion, psychology of waiting, perceived performance, error tone, voice, celebrations, service recovery | Making things feel good, loading states, confirmations, brand moments |
-| `references/06-feedback-control-forms.md` | Nielsen heuristics, feedback, undo, error prevention, inline validation, form and checkout design, search, empty states, modals, permissions, accessibility in interaction | Forms, checkout, settings, errors, mobile interaction, search |
+| `references/04-motivation-habit-progress.md` | Fogg model, goal gradient, endowed progress, progress bars, Parkinson's law, IKEA effect, self-determination theory, flow, habits, rewards, implementation intentions, reactance | Onboarding, activation, retention, gamification, task completion, multi-step flows |
+| `references/05-emotion-memory-delight.md` | Peak-end rule, Kano, delight, microinteractions, labor illusion, psychology of waiting, response times & Doherty threshold, error tone, voice, celebrations, service recovery | Making things feel good, loading states, latency budgets, confirmations, brand moments |
+| `references/06-feedback-control-forms.md` | Nielsen heuristics, feedback, undo, error prevention, Postel's law, inline validation, form and checkout design, search, empty states, modals, permissions, accessibility in interaction | Forms, checkout, settings, errors, mobile interaction, search |
 | `references/07-ethics-dark-patterns-law.md` | Dark pattern taxonomy with fair alternatives, evidence on their effects, current US, UK and EU law | Any persuasion, subscription, cancellation, consent or pricing work. Always skim before recommending urgency, scarcity, defaults or retention tactics |
-| `references/08-evidence-myths-measurement.md` | Replication status, myths, how to read industry stats, metrics, A/B testing hygiene | When citing numbers, when the user cites a "law", when proposing tests |
+| `references/08-evidence-myths-measurement.md` | Replication status table, myths, how to read industry stats, metrics, A/B testing hygiene | When citing numbers, when the user cites a "law", when proposing tests |
 | `references/09-audit-checklist.md` | Full audit checklist by principle, severity scale, output template | Audit mode, always |
 
 ### Flow quick index
