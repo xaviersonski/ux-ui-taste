@@ -10,7 +10,7 @@ How experiences feel in the moment and how they are remembered afterwards. Satis
 5. Delight that lasts
 6. Microinteractions
 7. Labor illusion and operational transparency
-8. Psychology of waiting
+8. Psychology of waiting, chronoperception and occupied time
 9. Response time limits and the Doherty threshold
 10. Perceived performance techniques
 11. Skeleton screens and spinners
@@ -103,31 +103,56 @@ How experiences feel in the moment and how they are remembered afterwards. Satis
 **Audit question.** Does every interactive element respond instantly and clearly in every state?
 
 ## 7. Labor illusion and operational transparency
-**Evidence** B (Buell and Norton 2011, five experiments in online travel and dating. When sites showed the work being done, people sometimes preferred longer waits to instant results, even with identical results. A plain progress bar did not have the same effect).
+**Evidence** B (Buell and Norton 2011, Harvard Business School, *Management Science*; five experiments in online travel and dating. When websites showed the computational work being performed, users rated outcomes as more valuable and reported higher satisfaction with longer waits than with instantaneous results or blank progress bars).
 
-**What it says.** Seeing the effort made on your behalf increases perceived value and reciprocity.
-
-**Apply.**
-- During longer processes, show what's happening ("Checking 400 airlines", "Comparing 12 quotes", "Scanning your document for key terms").
-- Show the steps of complex work (AI generation, analysis, matching) as it happens.
-- Summarize the work done ("We checked 34 sources").
-
-**Limits.** Don't add fake delays to instant processes. The effect shows diminishing returns, and users eventually notice. Real speed still wins.
-
-**Audit question.** During any wait, can users see the real work being done for them?
-
-## 8. Psychology of waiting
-**Evidence** B (Maister 1985. Widely supported in service operations research).
-
-**What it says.** Unoccupied time feels longer than occupied time. Uncertain and unexplained waits feel longer than known and explained ones. Anxiety makes waits feel longer. Unfair waits feel longer than fair ones.
+**What it says.** Seeing the effort, rigor, or computation exerted on your behalf increases perceived quality, trust, and reciprocity. If a system completes an extraordinarily complex task instantaneously behind a blank screen, users often discount its thoroughness. Conversely, showing real-time operational transparency justifies the wait and elevates perceived craft.
 
 **Apply.**
-- Tell users how long it will take and why.
-- Give something useful to do or read during waits (tips, a preview, next steps).
-- Reduce anxiety during payments and submissions ("Don't close this window, this takes about 10 seconds").
-- Send updates for long processes (email when your export is ready).
+- **Operational transparency:** During processes exceeding 1.5 seconds, display a running stream of genuine sub-tasks ("Scanning 42 airline databases...", "Verifying SSL certificate...", "Checking DNS propagation...", "Comparing 18 pricing tiers...").
+- **AI thought and task streaming:** Expose the model's reasoning stages or pipeline milestones (e.g., *"Analyzing schema $\to$ Generating unit tests $\to$ Linting output"*).
+- **Summary of labor on completion:** Close the loop by explicitly stating the work done: *"Scanned 14,200 records across 4 regions in 1.4 seconds."*
 
-**Audit question.** For every wait, do users know how long, why, and that it's working?
+**Limits & Anti-patterns.** Never inject artificial, fake `sleep()` delays into instant operations to fake effort. Users and developers quickly detect phony spinners, destroying trust. Operational transparency is for *communicating real work*, not fabricating synthetic toil.
+
+**Audit question.** During any wait over 1.5 seconds, can users see the real work, milestones, and computational effort being executed for them?
+
+## 8. Psychology of waiting, chronoperception and occupied time
+**Evidence** B (David Maister 1985, *The Psychology of Waiting Lines*; Christopher Hsee, Adelle Yang, and Liangyan Wang 2010, *Psychological Science*; Chris Harrison et al. 2007 ACM UIST & 2010 ACM CHI; Richard Oliver 1980, *Expectation Disconfirmation Theory*).
+
+**What it says.** The subjective experience of time (**chronoperception**) rarely matches clock time. How a user *feels* about a delay is driven far more by cognitive occupation, anxiety, and perceived equity than by actual millisecond duration.
+
+### Classic Lateral Case Studies
+- **The Elevator Mirror Paradox:** In mid-20th-century New York high-rises, building managers faced intense tenant complaints regarding slow elevators. Mechanical engineers proposed expensive new motors and extra elevator shafts costing hundreds of thousands of dollars. A psychologist suggested installing full-length mirrors in lobbies and elevator cabs. Waiting tenants adjusted their ties, fixed their hair, and observed others. **Occupied time replaced unoccupied time.** Complaints dropped to near zero without altering elevator speed by a single millisecond.
+- **The Houston Airport Baggage Claim:** Passengers arrived at gates, walked 1 minute to baggage claim, and stood for 7 minutes waiting for carousels to turn, producing heavy complaints. The airport spent millions optimizing ground crews, shaving wait times to 6 minutes—yet complaints persisted. The airport reframed the problem: walking is *occupied time*; standing stagnant is *unoccupied time*. They moved arrival gates to the farthest concourse. Passengers now walked for 6 minutes and waited 1 minute. Complaints dropped to zero.
+
+### Maister's Core Principles of Waiting Lines (1985)
+1. **Occupied time feels shorter than unoccupied time.** Mental engagement distracts attention from the passage of time.
+2. **People want to get started.** Preprocess waits feel longer than in-process waits. Letting a user begin entering metadata, customizing options, or viewing a preview while background setup occurs eliminates the perceived start delay.
+3. **Uncertain waits feel longer than known, finite waits.** A known 45-second countdown feels shorter and far calmer than an indefinite spinning circle that could take 5 seconds or 5 minutes.
+4. **Unexplained waits feel longer than explained waits.** Users tolerate delays when they understand the cause ("Compiling 48 assets..."), but grow anxious when the system gives no rationale.
+5. **Anxiety makes waits feel longer.** Fear of double-charging, lost drafts, or broken forms amplifies perceived duration. Reassurance (*"Your spot is reserved. Please do not refresh"*) compresses perceived time.
+6. **Unfair waits feel longer than equitable waits.** Violations of First-In-First-Out (FIFO) or perceived queue jumping trigger intense user reactance.
+7. **The more valuable the service, the longer users tolerate waiting.**
+8. **Solo waits feel longer than group or socially validated waits.**
+
+### Idleness Aversion & Justifiable Busyness (Hsee et al. 2010)
+Humans naturally dread idleness, but require a minimal justification to be busy. When interfaces provide users with a light, justifiable task during a backend operation (e.g. answering a quick preference question, reading a relevant tip, or tweaking an optional setting), user mood and reported satisfaction increase dramatically compared to forcing them to sit idle.
+
+### Progress Bar Chronoperception (Harrison et al. 2007, 2010)
+- **Accelerating Progress Bars:** A progress bar that starts with steady, predictable movement and accelerates toward 100% is perceived as up to **11% faster** than a bar that fills at a constant mathematical rate.
+- **Backward Optical Flow (Visual Doppler Effect):** Progress bars with animated backward-moving ripples or pulsing bands (moving leftwards while the bar fills rightwards) reduce perceived wait time by **12%**.
+- **The 99% Freeze Trap:** Pauses at the beginning of a wait are readily forgiven; pausing or freezing at 99% triggers severe anxiety, destroys trust, and ruins the remembered experience (violating the **Peak-End Rule**). If a long tail is unavoidable, keep the bar at 90% while cycling active status micro-copy rather than stalling at 99%.
+
+### Pipelined Interleaved Waiting (Active vs. Passive Sequencing)
+Convert sequential blocking steps into parallel active tasks:
+- *Anti-Pattern (Serial Blocking):* Select video $\to$ wait 90s for upload to finish $\to$ enter title and tags $\to$ submit.
+- *Lateral Pattern (Pipelining):* Select video $\to$ upload begins immediately in the background while the user fills title, description, thumbnail, and tags. By the time the user finishes typing, upload is complete. **Perceived wait time: 0 seconds.**
+
+### Expectation Disconfirmation (Oliver 1980)
+$\text{Satisfaction} = \text{Perceived Experience} - \text{Expectation}$.
+Always under-promise and over-deliver on estimated durations. Stating *"This operation takes approximately 60 seconds"* when it reliably takes 35 seconds produces **positive disconfirmation** (delight). Stating *"Just a moment..."* when it takes 20 seconds produces **negative disconfirmation** (frustration).
+
+**Audit question.** For every wait exceeding 1 second: Is unoccupied time transformed into occupied or transparent time? Is the wait finite and explained? Are subsequent tasks pipelined to run during background processing?
 
 ## 9. Response time limits and the Doherty threshold
 **Evidence** A for sensory reaction time (Miller 1968; Card, Moran and Newell 1983; Nielsen 1993). B for user productivity and flow preservation under 400 ms (Doherty and Thadani 1982 IBM research report; Google Core Web Vitals data).

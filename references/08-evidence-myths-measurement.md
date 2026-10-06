@@ -56,8 +56,11 @@ When an effect is graded A in the lab but untested in product contexts, say so (
 | Choice overload | Conditional | B | Near-zero mean (Scheibehenne 2010), real under four moderators (Chernev 2015) |
 | Loss aversion | Real, magnitude debated | B | Gal and Rucker 2018 |
 | Goal gradient | Supported | B | Kivetz et al. 2006 |
-| Endowed progress | Supported, few replications | B | Nunes and Drèze 2006 |
-| Labor illusion | Supported | B | Buell and Norton 2011 |
+| Labor illusion & operational transparency | Supported | B | Buell and Norton 2011 |
+| Maister's waiting laws (occupied time) | Supported | B | Maister 1985; Houston airport, elevator mirror studies |
+| Idleness aversion & justifiable busyness | Supported | B | Hsee, Yang, and Wang 2010 |
+| Accelerating progress bars (chronoperception) | Supported | B | Harrison et al. 2007 ACM UIST, 2010 ACM CHI |
+| Expectation disconfirmation in waits | Supported | B | Oliver 1980 |
 | IKEA effect | Supported | B | Norton et al. 2012 |
 | Social norms nudges | Real, modest at scale | B | Allcott 2011 about 2% |
 | Aesthetic-usability effect | Mixed, can reverse after use | B | Tuch et al. 2012 |

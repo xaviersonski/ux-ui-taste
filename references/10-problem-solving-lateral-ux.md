@@ -39,16 +39,16 @@ Before proposing any change, identify which fundamental human friction is causin
 │    Motor Friction │ hunting, or precise finger gymnastics."                   │
 │                   │ (Overload, Fitts's distance, poor grouping, no defaults)  │
 ├───────────────────┼───────────────────────────────────────────────────────────┤
-│ 4. Timing & Value │ "You are asking for my commitment, email, or money before │
-│    Asymmetry      │ showing me any real value."                               │
-│                   │ (Premature ask, violating 'Earn the ask')                 │
+│ 4. Timing, Latency│ "You are asking for my commitment before showing value,   │
+│    & Rhythm       │ or forcing me into unoccupied, stagnant waiting."         │
+│    Friction       │ (Premature ask, Maister's unoccupied wait, blocking state)│
 ├───────────────────┼───────────────────────────────────────────────────────────┤
 │ 5. Autonomy &     │ "I feel forced, manipulated, nagged, or trapped."         │
 │    Reactance      │ (Dark patterns, confirmshaming, hard paywalls, no undo)   │
 └───────────────────┴───────────────────────────────────────────────────────────┘
 ```
 
-**Diagnostic Rule:** A solution aimed at the wrong friction dimension always fails. For example, if a user isn't clicking because of *Anxiety Friction* (fear of being billed), making the button bigger (*Motor*) or adding a tooltip (*Comprehension*) will not move the metric. You must eliminate the anxiety (add *"No credit card required. Cancel in 1 click."*).
+**Diagnostic Rule:** A solution aimed at the wrong friction dimension always fails. For example, if a user isn't clicking because of *Anxiety Friction* (fear of being billed), making the button bigger (*Motor*) or adding a tooltip (*Comprehension*) will not move the metric. You must eliminate the anxiety (add *"No credit card required. Cancel in 1 click."*). Similarly, if users abandon during a slow process due to *Timing Friction*, shaving 200 ms off the backend query (*Motor/Engineering*) often fails; turning unoccupied waiting into occupied or transparent time (*Chronoperception*) fixes the human experience.
 
 ---
 
@@ -95,15 +95,16 @@ When generating solutions, run the problem through these eight structural moves:
 - **How it works:** Address the exact objection at the micro-moment of decision.
 - **Example:** Placing micro-copy directly below a payment CTA: *"7-day free trial. An email reminder is sent 2 days before billing starts. Cancel in 2 clicks from settings."*
 
-### 6. State Reframing (Springboard States)
-- **The Core Question:** How can a passive or negative state (empty, loading, error, 404) become an active accelerator?
-- **How it works:** Transform dead ends into high-momentum starting points.
-- **Example:** Turn an empty dashboard into a starter gallery with 3 one-click templates rather than a blank page with a sad illustration. Turn a long search wait into operational transparency showing live sources checked.
+### 6. State Reframing & Occupied Waiting (The Elevator Mirror Move)
+- **The Core Question:** How can a passive, stagnant, or negative state (loading, waiting, empty, error) become an active, engaging accelerator?
+- **The Classical Elevator Mirror Paradox:** In mid-20th-century New York high-rises, tenants complained bitterly that elevators were too slow. Engineers tried to design faster motors ($500k expense). A psychologist recommended installing full-length mirrors in lobbies and elevator cabs. Tenants adjusted their ties, fixed their hair, and looked at others. **Occupied time replaced unoccupied time.** Complaints vanished without speeding up the mechanical elevators by a single millisecond. Similarly, Houston Airport eliminated baggage claim complaints not by hiring faster handlers, but by moving gates farther away so passengers walked for 6 minutes (occupied time) instead of waiting stagnant for 7 minutes (unoccupied time).
+- **How it works:** When backend operations take time, never strand the user in unoccupied waiting with a generic spinner. Apply the **Labor Illusion** (Buell & Norton 2011) by exposing real-time operational milestones ("Verifying SSL...", "Scanning 42 databases..."), or satisfy **Idleness Aversion** (Hsee et al. 2010) with interactive previews, tips, or optional micro-customizations. Turn empty states into one-click starter templates rather than blank deserts.
 
-### 7. Progressive Engagement (The Staging Move)
-- **The Core Question:** Can we replace an intimidating wall of effort with a 1-second starter commitment?
-- **How it works:** Break a daunting task into a trivial micro-step that triggers the endowed progress effect and goal-gradient momentum.
-- **Example:** Rather than showing a 20-question financial survey, ask one simple, intriguing question on screen 1: *"What's your primary financial goal this year?"* Once answered, show *"1 of 3 quick stages completed"* and continue smoothly.
+### 7. Progressive Engagement & Pipelining (The Interleaved Move)
+- **The Core Question:** Can we eliminate perceived waiting and effort by breaking tasks into micro-commitments and running background processing in parallel with user actions?
+- **How it works:** 
+  1. *Staging:* Break an intimidating wall of effort into a 1-second starter commitment that triggers the endowed progress effect and goal-gradient momentum (e.g. asking one simple question on screen 1 rather than a 20-question form).
+  2. *Pipelining (Interleaved Execution):* Never force serial blocking (`[Upload file 60s]` $\to$ wait $\to$ `[Fill form]`). Trigger uploads and computational jobs the moment a source is selected, and let the user fill metadata (title, tags, notes) in parallel. By the time the user finishes typing, background processing is complete. Perceived wait time drops to 0 seconds.
 
 ### 8. Assumption Inversion (The Opposites Game)
 - **The Core Question:** What does the industry assume is mandatory, and what happens if we build the exact opposite?

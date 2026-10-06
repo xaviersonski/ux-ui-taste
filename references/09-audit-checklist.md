@@ -101,11 +101,12 @@ Prioritize by severity, then by reach (how many users hit it), then by effort.
 - [ ] Do drag interactions have a single-pointer alternative?
 - [ ] Is redundant entry avoided, and is authentication free of memory tests?
 
-## J. Performance (05)
+## J. Performance and waiting (05)
 - [ ] Does every action give visible feedback within 100 ms and complete transitions within the 400 ms Doherty threshold? (Doherty threshold, response times)
 - [ ] LCP under 2.5 s, INP under 200 ms, CLS under 0.1 on mobile?
 - [ ] No layout shift during load?
 - [ ] Is the loading pattern suited to the wait length, without flicker?
+- [ ] For waits over 1 second, is unoccupied time converted into occupied or transparent time (operational transparency, pipelined tasks, or engaging micro-interactions)? (Maister's laws, labor illusion, elevator mirror effect)
 
 ## K. Ethics and legal risk (07)
 - [ ] Transparency test. Would each tactic still work if users understood it?

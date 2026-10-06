@@ -331,7 +331,7 @@ ux-ui-taste/
     ├── 02-perception-attention-visual.md   # Hierarchy, Gestalt, scanning patterns, Fitts's law
     ├── 03-decision-persuasion-pricing.md   # Defaults, anchoring, social proof, pricing psychology
     ├── 04-motivation-habit-progress.md     # Fogg model, goal gradient, IKEA effect, habits
-    ├── 05-emotion-memory-delight.md        # Peak-end rule, Kano model, perceived speed, waiting
+    ├── 05-emotion-memory-delight.md        # Peak-end rule, waiting psychology, chronoperception, labor illusion
     ├── 06-feedback-control-forms.md        # Heuristics, form design, validation, checkout UX
     ├── 07-ethics-dark-patterns-law.md      # Dark patterns catalog, alternatives, FTC/DSA law
     ├── 08-evidence-myths-measurement.md    # Evidence grades, debunked myths, A/B testing

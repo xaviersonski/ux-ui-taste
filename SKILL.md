@@ -70,7 +70,7 @@ Read only the files relevant to the task. Each principle entry has the same shap
 | `references/02-perception-attention-visual.md` | Visual hierarchy, Gestalt (proximity, similarity, uniform connectedness, Prägnanz), scanning patterns, the fold, Fitts's law & target distance, target sizes, first impressions, typography, color, contrast, motion | Layout, visual design, mobile, landing pages, anything visual |
 | `references/03-decision-persuasion-pricing.md` | Defaults, anchoring, decoys, framing, loss aversion, pricing psychology, social proof, reviews, trust, scarcity, urgency, reciprocity, risk reversal | Pricing pages, paywalls, product pages, signup, plan selection, CTAs |
 | `references/04-motivation-habit-progress.md` | Fogg model, goal gradient, endowed progress, progress bars, Parkinson's law, IKEA effect, self-determination theory, flow, habits, rewards, implementation intentions, reactance | Onboarding, activation, retention, gamification, task completion, multi-step flows |
-| `references/05-emotion-memory-delight.md` | Peak-end rule, Kano, delight, microinteractions, labor illusion, psychology of waiting, response times & Doherty threshold, error tone, voice, celebrations, service recovery | Making things feel good, loading states, latency budgets, confirmations, brand moments |
+| `references/05-emotion-memory-delight.md` | Peak-end rule, Kano, delight, microinteractions, labor illusion & operational transparency, waiting psychology & chronoperception (Maister's laws, idleness aversion, accelerating progress bars, elevator mirror effect), response times & Doherty threshold, error tone, voice, celebrations, service recovery | Making things feel good, loading states, latency budgets, confirmations, brand moments |
 | `references/06-feedback-control-forms.md` | Nielsen heuristics, feedback, undo, error prevention, Postel's law, inline validation, form and checkout design, search, empty states, modals, permissions, accessibility in interaction | Forms, checkout, settings, errors, mobile interaction, search |
 | `references/07-ethics-dark-patterns-law.md` | Dark pattern taxonomy with fair alternatives, evidence on their effects, current US, UK and EU law | Any persuasion, subscription, cancellation, consent or pricing work. Always skim before recommending urgency, scarcity, defaults or retention tactics |
 | `references/08-evidence-myths-measurement.md` | Replication status table, myths, how to read industry stats, metrics, A/B testing hygiene | When citing numbers, when the user cites a "law", when proposing tests |
@@ -88,7 +88,7 @@ The library is organized by principle, but most requests arrive as a flow. Use t
 - **Cart and checkout.** 06 (forms, guest checkout, validation), 03 (total cost transparency, trust at payment), 05 (confirmation as the ending), 07 (drip pricing).
 - **Search and browse.** 01 (information scent), 06 (search UX, filters, no results).
 - **Dashboards and data-heavy tools.** 01 (cognitive load, defaults), 02 (hierarchy, density), 10 (subtractive solving).
-- **Errors, empty and loading states.** 05 (waiting, tone, recovery), 06 (feedback, prevention), 10 (state reframing).
+- **Errors, empty and loading states.** 05 (waiting psychology, chronoperception, elevator mirror effect, tone), 06 (feedback, prevention), 10 (state reframing, pipelining).
 - **Notifications and re-engagement.** 04 (prompts, habits, reactance), 07 (nagging).
 - **Cancellation and downgrade.** 07 first, then 05 (endings).
 - **Stuck or underperforming flow.** 10 first (diagnose the 5 friction types, apply lateral thinking moves, avoid the vanilla trap).
@@ -103,7 +103,7 @@ When diagnosing problems and crafting fixes, follow the lateral thinking protoco
    - *Comprehension:* "I don't understand what this means or what clicking this will do." (Mental model clash).
    - *Anxiety & Risk:* "I understand, but fear the consequence: billing, spam, data loss." (Loss aversion).
    - *Cognitive / Motor:* "Demands too much reading, typing, or thumb travel." (Overload).
-   - *Timing & Value:* "Asking for commitment before demonstrating value." (Earn the ask violation).
+   - *Timing & Latency:* "Asking for commitment before showing value, or forcing unoccupied, stagnant waiting." (Premature ask, Maister's unoccupied time, chronoperception).
    - *Autonomy & Reactance:* "Feeling coerced, nagged, or trapped." (Dark patterns).
    A fix targeting the wrong friction always fails (e.g. making a button bigger when the user fears the hidden price).
 
