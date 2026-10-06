@@ -9,6 +9,26 @@
 
 ---
 
+## ⚡ TL;DR: Super Summary
+
+> **The 30-Second Brief:** This repository turns your AI assistant (or product team) into an elite, research-backed product designer. It replaces lazy, predictable AI advice (*"make the button bigger"*, *"add a tooltip"*) with empirical cognitive science, ethical persuasion, and lateral problem-solving.
+
+### Exactly WHAT It Does
+- **Audits Existing UIs & Code:** Critiques screenshots, Figma mockups, or frontend code for usability drop-offs, accessibility flaws, and conversion friction scored on a standardized **0–4 severity scale**.
+- **Designs New Flows & Screens:** Generates complete UX specs and clean front-end code—mapping user questions, emotional peaks, micro-copy, and every unglamorous state (empty, loading, error, edge cases).
+- **Diagnoses Root Causes (Not Symptoms):** Identifies *why* users hesitate across 5 human friction types (*Comprehension*, *Anxiety*, *Motor*, *Timing*, *Reactance*) rather than treating symptoms on the glass.
+- **Enforces Zero Dark Patterns:** Flags legal risks under FTC Click-to-Cancel, EU DSA (Art. 25), and UK DMCC regulations, replacing manipulative sludge with transparent, high-converting alternatives.
+
+### Exactly HOW It Does It
+1. **Triggered via AI Skill ([`SKILL.md`](SKILL.md)):** Whenever you ask your AI coding assistant (*Antigravity, Claude Code, Cursor, Windsurf*) to build, sketch, review, or debug a page, flow, or component, it activates automatically.
+2. **Selects the Right Operating Mode:**
+   - **Audit Mode:** Runs a 50ms gut-check $\to$ conducts a 5-second clarity test $\to$ evaluates the 40+ item heuristic checklist ([`references/09`](references/09-audit-checklist.md)) $\to$ delivers the top 3 highest-impact fixes with disqualified vanilla alternatives.
+   - **Design Mode:** Frames the job $\to$ maps user anxieties per step $\to$ applies relevant cognitive laws $\to$ specifies all visual states $\to$ designs the peak-end moments $\to$ delivers specs or code.
+3. **Pulls from 10 Evidence-Graded Modules ([`references/`](references/)):** Every recommendation cites a scientific evidence grade (**Grade A** meta-analyses to **Grade D** debunked myths) so you never build on urban legends.
+4. **Applies Lateral UX Thinking ([`references/10`](references/10-problem-solving-lateral-ux.md)):** Instead of one obvious answer, it generates **3 distinct structural angles** (*Subtractive/Elimination*, *Cognitive/Risk Reversal*, *Structural/Timing Shift*) and explains why the superficial default was rejected.
+
+---
+
 ## Overview
 
 Most UX advice swings between two extremes: dogmatic rules of thumb ("always keep menus to 7 items", "three clicks max") or aggressive growth hacking that relies on manipulative dark patterns.
